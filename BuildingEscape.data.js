@@ -230,7 +230,8 @@ Module.expectedDataFileDownloads++;
         start: 100,
         audio: 0,
         end: 481996281,
-        filename: "/BuildingEscape/Content/Paks/BuildingEscape-HTML5.pak"
+        filename:
+          "https://media.githubusercontent.com/media/comountainclimber/escape_room/master/BuildingEscape-HTML5.pak"
       }
     ],
     remote_package_size: 481996281,
