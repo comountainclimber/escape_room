@@ -193,11 +193,11 @@ Module.expectedDataFileDownloads++;
           DataRequest.prototype.requests[files[i].filename].onload();
         }
         Module["removeRunDependency"](
-          "datafile_/https://media.githubusercontent.com/media/comountainclimber/escape_room/master/BuildingEscape.data"
+          "https://media.githubusercontent.com/media/comountainclimber/escape_room/master/BuildingEscape.data"
         );
       }
       Module["addRunDependency"](
-        "datafile_/https://media.githubusercontent.com/media/comountainclimber/escape_room/master/BuildingEscape.data"
+        "https://media.githubusercontent.com/media/comountainclimber/escape_room/master/BuildingEscape.data"
       );
 
       if (!Module.preloadResults) Module.preloadResults = {};
