@@ -944,7 +944,7 @@ function isDataURI(filename) {
  return String.prototype.startsWith ? filename.startsWith(dataURIPrefix) : filename.indexOf(dataURIPrefix) === 0;
 }
 function integrateWasmJS() {
- var wasmTextFile = "BuildingEscape.wast";
+ var wasmTextFile = "BuildingEscape.wasm";
  var wasmBinaryFile = "https://github.com/comountainclimber/escape_room/blob/master/EscapeRoom.wasm?raw=true";
  var asmjsCodeFile = "BuildingEscape.temp.asm.js";
  if (!isDataURI(wasmTextFile)) {
