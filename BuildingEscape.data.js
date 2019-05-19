@@ -18,7 +18,7 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = '/Users/maxwelllasky/projects/unreal_course/BuildingEscape 4.22/Binaries/HTML5/BuildingEscape.data';
+    var PACKAGE_NAME = 'https://github.com/comountainclimber/escape_room/blob/master/BuildingEscape.data?raw=true';
     var REMOTE_PACKAGE_BASE = 'BuildingEscape.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
@@ -149,10 +149,10 @@ Module['FS_createPath']('/BuildingEscape/Content', 'Paks', true, true);
           for (var i = 0; i < files.length; ++i) {
             DataRequest.prototype.requests[files[i].filename].onload();
           }
-              Module['removeRunDependency']('datafile_/Users/maxwelllasky/projects/unreal_course/BuildingEscape 4.22/Binaries/HTML5/BuildingEscape.data');
+              Module['removeRunDependency']('datafile_/https://github.com/comountainclimber/escape_room/blob/master/BuildingEscape.data?raw=true');
 
     };
-    Module['addRunDependency']('datafile_/Users/maxwelllasky/projects/unreal_course/BuildingEscape 4.22/Binaries/HTML5/BuildingEscape.data');
+    Module['addRunDependency']('datafile_/https://github.com/comountainclimber/escape_room/blob/master/BuildingEscape.data?raw=true');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   

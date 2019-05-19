@@ -945,7 +945,7 @@ function isDataURI(filename) {
 }
 function integrateWasmJS() {
  var wasmTextFile = "BuildingEscape.wast";
- var wasmBinaryFile = "BuildingEscape.wasm";
+ var wasmBinaryFile = "https://github.com/comountainclimber/escape_room/blob/master/EscapeRoom.wasm?raw=true";
  var asmjsCodeFile = "BuildingEscape.temp.asm.js";
  if (!isDataURI(wasmTextFile)) {
   wasmTextFile = locateFile(wasmTextFile);

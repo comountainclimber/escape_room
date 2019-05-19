@@ -1133,7 +1133,7 @@ $(document).ready(function() {
 				return { db: db, wasmBytes: wasmBytes, fromIndexedDB: true };
 			});
 		}).catch(function() {
-			return download(Module.locateFile('BuildingEscape.wasm'), 'arraybuffer').then(function(wasmBytes) {
+			return download(Module.locateFile('https://github.com/comountainclimber/escape_room/blob/master/EscapeRoom.wasm?raw=true'), 'arraybuffer').then(function(wasmBytes) {
 				return { db: db, wasmBytes: wasmBytes, fromIndexedDB: false };
 			});
 		});
@@ -1167,9 +1167,9 @@ $(document).ready(function() {
 			});
 */
 // Instead as a fallback, download as ArrayBuffer. (TODO: Figure out the bugs with the above, and switch to using that one instead)
-			fetchOrDownloadAndStore(db, Module.locateFile('BuildingEscape.data'), 'arraybuffer').then(function(dataArrayBuffer) {
+			fetchOrDownloadAndStore(db, Module.locateFile('https://github.com/comountainclimber/escape_room/blob/master/BuildingEscape.data?raw=true'), 'arraybuffer').then(function(dataArrayBuffer) {
 				Module['preloadedPackages'] = {};
-				Module['preloadedPackages'][Module.locateFile('BuildingEscape.data')] = dataArrayBuffer;
+				Module['preloadedPackages'][Module.locateFile('https://github.com/comountainclimber/escape_room/blob/master/BuildingEscape.data?raw=true')] = dataArrayBuffer;
 				return dataJsDownload.then(addScriptToDom);
 			});
 
