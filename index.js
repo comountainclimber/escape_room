@@ -1,5 +1,24 @@
-var express = require("express");
-var expressStaticGzip = require("express-static-gzip");
-var app = express();
+const express = require("express");
+const app = express();
+const port = 3000;
 
-app.use("/", expressStaticGzip("./"));
+app.get("*.jsgz", function(req, res, next) {
+  res.set("Content-Encoding", "gzip");
+  res.set("Content-Type", "text/javascript");
+  next();
+});
+app.get("*.datagz", function(req, res, next) {
+  res.set("Content-Encoding", "gzip");
+  res.set("Content-Type", "text/css");
+  next();
+});
+
+app.get("*.wasmgz", function(req, res, next) {
+  res.set("Content-Encoding", "gzip");
+  res.set("Content-Type", "text/css");
+  next();
+});
+
+app.use(express.static("static"));
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
