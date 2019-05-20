@@ -9,18 +9,16 @@ app.get("*.jsgz", function(req, res, next) {
 });
 app.get("*.datagz", function(req, res, next) {
   res.set("Content-Encoding", "gzip");
-  res.set("Content-Type", "text/css");
   next();
 });
 
 app.get("*.wasmgz", function(req, res, next) {
   res.set("Content-Encoding", "gzip");
-  res.set("Content-Type", "text/css");
   next();
 });
 
 app.use(express.static("static"));
 
-app.listen(process.env.PORT || 5000, () =>
-  console.log(`Example app listening on port ${port}!`)
+app.listen(process.env.PORT || 3000, () =>
+  console.log(`App listening on port ${process.env.PORT || 3000}!`)
 );
