@@ -21,4 +21,6 @@ app.get("*.wasmgz", function(req, res, next) {
 
 app.use(express.static("static"));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(process.env.PORT || 5000, () =>
+  console.log(`Example app listening on port ${port}!`)
+);
