@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/comountainclimber/escape_room#readme",
   "dependencies": {
-    "express": "^4.17.0"
+    "express": "^4.17.3"
   }
 }
